@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import React, { Suspense, useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState, useRef } from 'react'
 import Loader from '../components/Loader.jsx'
 import Island from '../models/Island.jsx'
 import { OrbitControls } from '@react-three/drei';
@@ -7,6 +7,8 @@ import Sky from '../models/Sky.jsx';
 import Bird from '../models/Bird.jsx';
 import Plane from '../models/Plane.jsx';
 import HomeInfo from '../components/HomeInfo.jsx';
+import sakura from '../assets/sakura.mp3'
+import { soundoff, soundon } from '../assets/icons/index.js';
 
 
 function Home() {
@@ -40,6 +42,21 @@ function Home() {
     return [screenScale, screenPosition]
   }
   const [planeScale, planePostion] = adjustPlane()
+
+  const [isPlayingMusic, setIsPlayingMusic] = useState(false)
+  const audioRef = useRef(new Audio(sakura))
+  audioRef.current.volume = 0.3;
+  audioRef.current.loop = true;
+
+  useEffect(() => {
+    if (isPlayingMusic) {
+      audioRef.current.play()
+    }
+    return () => {
+      audioRef.current.pause()
+    }
+  }, [isPlayingMusic])
+
 
   return (
     <section className={`w-full h-screen relative ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}>
@@ -86,6 +103,13 @@ function Home() {
         </Suspense>
 
       </Canvas>
+
+      <div className='absolute bottom-14 md:bottom-2 '>
+        <img src={!isPlayingMusic ? soundoff : soundon} alt="sound"
+          className='cursor-pointer w-12'
+          onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+        />
+      </div>
     </section>
   )
 }

@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import Avatar from '../models/Avatar'
 import toast from 'react-hot-toast'
+import Social from '../components/Social'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -63,7 +64,7 @@ function Contact() {
     let screenScale, screenPosition;
     if (window.innerWidth < 768) {
       screenScale = [3, 3, 3]
-      screenPosition = [0, -3, 0]
+      screenPosition = [0, -3.1, 0]
     }
     else {
       screenScale = [9, 9, 9]
@@ -77,7 +78,7 @@ function Contact() {
     <section className='relative flex lg:flex-row flex-col max-container h-screen'>
 
       <div className='min-w-[60%] flex-1 flex flex-col  md:mt-6'>
-        <h1 className='head-text mb-4 mt-[-40px]'>Get in Touch</h1>
+        <h1 className='head-text mb-4 mt-[-40px] blue-gradient_text'>Get in Touch</h1>
 
         <form className='sm:w-[85%]' onSubmit={handleSubmit}>
 
@@ -88,16 +89,21 @@ function Contact() {
           <input type="text" id='email' name='email' value={formData.email} placeholder='you@example.com' className='input mb-1 sm:mb-2' required onChange={handleChange} />
 
           <label htmlFor="message" className='font-semibold'>Message</label>
-          <textarea className='textarea' id='message' value={formData.message} rows={window.innerWidth<768 ? 2 : 4} name='message' placeholder='Enter message here' required onChange={handleChange} />
+          <textarea className='textarea' id='message' value={formData.message} rows={window.innerWidth < 768 ? 2 : 4} name='message' placeholder='Enter message here' required onChange={handleChange} />
 
-          <button className='btn btn-success mt-2 sm:mt-6' disabled={isLoading} type='submit'>
-            {isLoading ? "Sending" : "Send Message"}
-          </button>
+          <div className='md:flex gap-2 items-center'>
+            <button className='btn md:btn-md btn-success mt-2 ' disabled={isLoading} type='submit'>
+              {isLoading ? "Sending" : "Send Message"}
+            </button>
+            <div className='md:mt-2 md:rotate-0 -rotate-90 relative left-36 md:left-0 top-32 md:top-0'>
+            <Social />
+            </div>
+          </div>
 
         </form>
       </div>
 
-      <div className='lg:w-1/2 w-full md:h-[500px] h-[390px] mt-[-20px] md:mt-0'>
+      <div className='md:w-1/2 w-3/4 md:h-[550px] h-[500px] mt-[-50px] md:mt-0'>
         <Canvas
           camera={{ near: 0.1, far: 1000 }}
         >
@@ -105,7 +111,7 @@ function Contact() {
           <ambientLight intensity={1} />
           <hemisphereLight intensity={1} />
           <Avatar scale={avatarScale} position={avatarPostion} />
-        </Canvas> 
+        </Canvas>
       </div>
 
     </section>

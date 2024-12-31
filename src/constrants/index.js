@@ -1,5 +1,4 @@
 import {
-    car,
     contact,
     css,
     express,
@@ -22,8 +21,9 @@ import restNest from '../assets/projects/restNest.png'
 import chatAppIcon from '../assets/projects/chatAppIcon.png'
 import chatApp from '../assets/projects/chatApp.png'
 import currency from '../assets/projects/currency.png'
-import currencyIcon from '../assets/projects/currencyIcon.jpg'
+import currencyIcon from '../assets/projects/currencyIcon.webp'
 import restNestIcon from '../assets/projects/restNestIcon.png'
+
 
 
 export const skills = [
@@ -115,20 +115,26 @@ export const projects = [
         name: 'restNest',
         description: 'A web application allowing users to list, discover accommodations in various locations.',
         link: 'https://restnest.onrender.com/',
+        bgColor: 'purple',
+        tech: ["#ejs ","#nodejs ","#express ","#mongodb "]
     },
     {
         iconUrl: chatAppIcon,
         image: chatApp,
-        name: 'Chat App',
-        description: 'A simple chat application enabling users to send messages and engage in real-time conversations with friends.',
+        name: 'chatApp',
+        description: 'A simple chat application enabling users to send messages and images in real-time.',
         link: 'https://chatapp-jq17.onrender.com/',
+        bgColor: 'brown',
+        tech: ["#react","#node.js","#express","#mongodb","#socket.io"]
     },
     {
         iconUrl: currencyIcon,
         image: currency,
-        name: 'Currency-Converter',
+        name: 'currencyConverter',
         description: 'A straightforward currency converter app that allows users to easily convert between different currencies in real-time.',
         link: 'https://currency-converter-nine-ruddy.vercel.app/',
+        bgColor: 'orange',
+        tech: ["#html ","#css ","#javascript ","#fetchApi"]
     },
 
 ];

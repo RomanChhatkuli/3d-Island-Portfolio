@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function About() {
   return (
     <section className='w-full h-full max-container'>
-      <h1 className='head-text'>Hello, I'm <span className='blue-gradient_text font-semibold'>Roman</span></h1>
+      <h1 className='head-text'>Hello, I'm <span className='blue-gradient_text font-semibold'>Roman</span> 👋</h1>
 
       <div className='mt-5 flex gap-3 text-slate-500 flex-col font-medium'>
         <p>Full-stack web developer based in Nepal, specializing in building dynamic and interactive web applications.</p>
