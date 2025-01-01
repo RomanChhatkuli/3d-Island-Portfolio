@@ -1,4 +1,5 @@
 import React from 'react'
+import { Analytics } from "@vercel/analytics/react"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
@@ -11,6 +12,7 @@ function App() {
   return (
     <main className='bg-slate-300/20'>
     <BrowserRouter>
+    <Analytics />
     <Toaster />
     <Navbar/>
       <Routes>

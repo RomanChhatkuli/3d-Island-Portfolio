@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 const texts = {
   1: (
     <div>
-      Hi, I am <span className="font-serif font-semibold blue-gradient_text">Roman</span> 👋<br /> A fullstack developer from Nepal
+      Hi, I am <span className="font-serif font-semibold blue-gradient_text">Roman</span> 👋<br /> A fullstack web developer from Nepal
+      <br />
+      <Link to="/contact">
+        <button className="bg-blue-400 p-1 m-1 rounded-full px-4 cursor-pointer">Get in touch</button>
+      </Link>
     </div>
   ),
   2: (
