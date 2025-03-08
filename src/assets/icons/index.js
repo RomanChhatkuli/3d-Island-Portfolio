@@ -26,6 +26,8 @@ import threejs from './threejs.svg'
 import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
+import postman from './postman.png'
+import zustand from './zustand.png'
 
 export {
     css,
@@ -55,5 +57,7 @@ export {
     contact,
     soundon,
     soundoff,
-    threejs
+    threejs,
+    zustand,
+    postman
 }

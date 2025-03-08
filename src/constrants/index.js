@@ -1,30 +1,26 @@
 import {
-    contact,
     css,
     express,
     git,
     github,
     html,
     javascript,
-    linkedin,
     mongodb,
     threejs,
     mui,
     nodejs,
-    pricewise,
     react,
     tailwindcss,
-    threads,
+    postman,
+    zustand
 } from "../assets/icons";
 
 import restNest from '../assets/projects/restNest.png'
 import chatAppIcon from '../assets/projects/chatAppIcon.png'
 import chatApp from '../assets/projects/chatApp.png'
-import currency from '../assets/projects/currency.png'
-import currencyIcon from '../assets/projects/currencyIcon.webp'
+import hamropasal from '../assets/projects/hamropasal.png'
+import hamropasalIcon from '../assets/projects/hamropasalIcon.webp'
 import restNestIcon from '../assets/projects/restNestIcon.png'
-
-
 
 export const skills = [
     {
@@ -87,54 +83,46 @@ export const skills = [
         name: "Threejs",
         type: "Frontend",
     },
-];
-
-
-export const socialLinks = [
     {
-        name: 'Contact',
-        iconUrl: contact,
-        link: '/contact',
+        imageUrl: postman,
+        name: "Postman",
+        type: "Frontend",
     },
     {
-        name: 'GitHub',
-        iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        imageUrl: zustand,
+        name: "Zustand",
+        type: "Frontend",
     },
-    {
-        name: 'LinkedIn',
-        iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
-    }
 ];
+
 
 export const projects = [
     {
-        iconUrl: restNestIcon,
-        image: restNest,
-        name: 'restNest',
-        description: 'A web application allowing users to list, discover accommodations in various locations.',
-        link: 'https://restnest.onrender.com/',
-        bgColor: 'purple',
-        tech: ["#ejs ","#nodejs ","#express ","#mongodb "]
+        iconUrl: hamropasalIcon,  
+        image: hamropasal,
+        name: 'HamroPasal',
+        description: 'An online shopping platform, offering a seamless eCommerce experience with product listings, cart management, and secure payments.',
+        link: 'https://hamropasal-1.onrender.com',
+        bgColor: 'orange',
+        tech: ["#react ","express ","#zustand","#esewa ","#mongodb","#cloudnary ","#jwt "]
     },
     {
         iconUrl: chatAppIcon,
         image: chatApp,
-        name: 'chatApp',
-        description: 'A simple chat application enabling users to send messages and images in real-time.',
-        link: 'https://chatapp-jq17.onrender.com/',
+        name: 'ChatApp',
+        description: 'A real-time messaging app supporting text and image sharing with WebSocket-based instant communication..',
+        link: 'https://chatapp-jq17.onrender.com',
         bgColor: 'brown',
         tech: ["#react","#node.js","#express","#mongodb","#socket.io"]
     },
     {
-        iconUrl: currencyIcon,
-        image: currency,
-        name: 'currencyConverter',
-        description: 'A straightforward currency converter app that allows users to easily convert between different currencies in real-time.',
-        link: 'https://currency-converter-nine-ruddy.vercel.app/',
-        bgColor: 'orange',
-        tech: ["#html ","#css ","#javascript ","#fetchApi"]
+        iconUrl: restNestIcon,
+        image: restNest,
+        name: 'RestNest',
+        description: 'A web application allowing users to list, discover accommodations in various locations.',
+        link: 'https://restnest.onrender.com',
+        bgColor: 'purple',
+        tech: ["#ejs ","#nodejs ","#express ","#mongodb ", "#cloudinary","#passport.js "]
     },
 
 ];
