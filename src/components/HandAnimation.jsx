@@ -10,7 +10,7 @@ const HandAnimation = ({ onDismiss }) => {
 
     setTimeout(() =>{
       dismiss();
-    },1000)
+    },2000)
 
     const dismiss = () => {
       setIsDragging(true);
