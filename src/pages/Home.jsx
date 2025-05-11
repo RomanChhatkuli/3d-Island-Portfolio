@@ -46,7 +46,7 @@ function Home() {
   useEffect(() => {
     setTimeout(() => {
       setShowHandAnimation(true)
-    }, 1500)
+    }, 2000)
   }, [])
 
 
